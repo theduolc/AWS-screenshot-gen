@@ -1,16 +1,8 @@
-# AWS Screenshot Generator <br>
-
-Description: Takes a screenshot of a website after entering a URL and returns the link to the screenshot in an S3 bucket. <br>
-
-+ Files for creating the infrastructure (EC2, S3 bucket) using Terraform
-+ Security groups for accessing the API using Terraform
-+ Python code for creating, uploading to the S3 bucket, and returning the URL to the saved screenshot
-
 # AWS Screenshot Generator
 
 ## 🚀 Overview
 
-**AWS Screenshot Generator** is a simple AWS-based service that takes a URL, captures a screenshot of the website, uploads it to an Amazon S3 bucket, and returns a public link to the screenshot. This repository includes both the infrastructure (Terraform) and the application logic (Python) required to deploy the service on AWS.:contentReference[oaicite:1]{index=1}
+**AWS Screenshot Generator** is a simple AWS-based service that takes a URL, captures a screenshot of the website, uploads it to an Amazon S3 bucket, and returns a public link to the screenshot. This repository includes both the infrastructure (Terraform) and the application logic (Python) required to deploy the service on AWS.
 
 ---
 
@@ -52,6 +44,7 @@ Before you begin, make sure you have:
 - Required Python packages (see below)
 
 ---
+
 ## 🛠️ Deployment
 
 ### 1. Clone the Repository
@@ -64,17 +57,19 @@ terraform init
 terraform plan
 terraform apply
 
+---
+
 Python Setup
 
-pip install -r requirements.txt
-
-Once deployed and the EC2 instance (or other compute) is running:
-
-Send a POST request to your service endpoint with a JSON body:
++ pip install -r requirements.txt
++ Once deployed and the EC2 instance (or other compute) is running:
++ Send a POST request to your service endpoint with a JSON body:
 
 {
   "url": "https://example.com"
 }
+
+---
 
 Usage
 
